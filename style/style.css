@@ -48,7 +48,6 @@
 }
 .banner-content {
   max-width: 850px;
-  /* max-height: 225px; */
   margin: 50px auto;
   text-align: center;
 }
@@ -69,23 +68,114 @@
 
 .banner-image {
   max-width: 1440px;
+  padding-bottom: 50px;
 }
 img.banner-img {
   width: 100%;
   height: 100%;
 }
+.first-parent {
+  max-width: 1340px;
+  height: auto;
+  margin: 50px auto;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+  padding: 20px;
+}
+.first-parent > div {
+  flex: 1;
+}
+.child-image{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+}
+.team-img{
+  width: 100%;
+  height: 100%;
+}
+.child-title{
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+span.first{
+  font-weight: 900;
+}
+span.second{
+  color: rgb(255, 144, 14);
+}
+.child-description{
+  margin-bottom: 10px;
+}
+.second-parent{
+  max-width: 1440px;
+  height: 960px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 10px;
+  position: relative;
+
+}
+
+.child-1-content{
+  border: 1px solid red;
+  max-width: 600px;
+  max-height: 900px;
+}
+.child-1-title{
+  font-size: 3rem;
+  margin: 20px 0px;
+  border-left: 5px solid rgb(255, 144, 14);
+  padding-left: 10px;
+}
+.child-1-description{
+  margin: 20px 0px;
+}
+.card{
+  border: 1px solid black;
+  margin: 20px 0px;
+  padding: 30px;
+}
+.child-1-image{
+  height: 850px;
+}
+
+.color{
+  width: 250px;
+  padding: 20px;
+  height: 150px;
+  position: absolute;
+  right: 0px;
+  left: 200px;
+  bottom: 0px;
+  z-index: 1;
+  margin: auto;
+  text-align: center;
+  background-color: rgb(255, 144, 14);
+  border-radius: 10px;
+}
+span.third{
+  font-size: 3rem;
+}
+
 
 @media screen and (max-width: 576px) {
-  .navbar {
+  .navbar,.nav-links,.first-parent,.second-parent {
     flex-direction: column;
     height: auto;
-    /* margin: 10px 10px; */
-    /* width: calc((100% - 5px)); */
   }
-  .nav-links {
-    flex-direction: column;
+  .second-parent{
     height: auto;
-    /* padding: 10px; */
+    justify-content: start;
+  }
+  .child-1-image{
+    max-height: 500px;
+  }
+  .child-button{
+    text-align: center;
   }
   .nav-item {
     padding: 5px;
@@ -94,10 +184,22 @@ img.banner-img {
     font-size: 2rem;
     font-weight: 700px;
   }
-  .banner-content{
+  .banner-content {
     margin: 10px auto;
   }
-  .banner-title{
+  .banner-title {
+    font-size: 2rem;
+  }
+  .color{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+  }
+  .text{
     font-size: 2rem;
   }
 }
