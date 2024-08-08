@@ -115,15 +115,17 @@ span.second{
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  gap: 10px;
+  gap: 50px;
   position: relative;
-
 }
 
 .child-1-content{
-  border: 1px solid red;
   max-width: 600px;
   max-height: 900px;
+}
+.child-1-image{
+  height: 850px;
+  width: 50%;
 }
 .child-1-title{
   font-size: 3rem;
@@ -135,13 +137,20 @@ span.second{
   margin: 20px 0px;
 }
 .card{
-  border: 1px solid black;
-  margin: 20px 0px;
+  margin: 25px 0px;
   padding: 30px;
+  border-radius: 8px;
+
+box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+background: rgb(255, 255, 255);
 }
-.child-1-image{
-  height: 850px;
+.card h4{
+  padding: 4px 0px;
 }
+.card p{
+  padding: 4px 0px;
+}
+
 
 .color{
   width: 250px;
@@ -161,6 +170,76 @@ span.third{
   font-size: 3rem;
 }
 
+.reward-parent{
+  max-width: 1440px;
+  height: auto;
+  margin: 50px auto;
+
+}
+.reward-parent-title{
+  font-size: 3rem;
+}
+.reward-paragraph{
+  width: 500px;
+}
+.reward-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 50px;
+  /* grid-template-rows: repeat(4,4fr); */
+  margin: 100px 150px;
+  /* justify-content: space-around; */
+}
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+  width: 241.83px;
+height: 241.83px;
+}
+.sponsor{
+  width: 542px;
+  height: 129px;
+  margin: 50px auto;
+  text-align: center;
+}
+.sponsor-title{
+  
+font-size: 45px;
+color: rgb(19, 19, 19);
+}
+.sponsor-paragraph{
+  margin-top: 24px;
+}
+.sponsor-company{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 20px;
+}
+.sponsor-parent{
+  max-width: 1440px;
+  margin: 50px auto;
+}
+.sponsor-company img{
+  filter: grayscale(100%);
+}
+.footer{
+  max-width: 1440px;
+height: 100px;
+margin: 50px auto;
+text-align: center;
+border-radius: 8px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+background: rgb(255, 244, 231);
+}
+
 
 @media screen and (max-width: 576px) {
   .navbar,.nav-links,.first-parent,.second-parent {
@@ -173,6 +252,7 @@ span.third{
   }
   .child-1-image{
     max-height: 500px;
+    width: 100%;
   }
   .child-button{
     text-align: center;
@@ -201,5 +281,14 @@ span.third{
   }
   .text{
     font-size: 2rem;
+  }
+  .reward-container{
+    grid-template-columns: repeat(2,1fr);
+    margin: 100px 0px;
+  }
+  .sponsor-company{
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
   }
 }
